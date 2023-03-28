@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             if (!Objects.requireNonNull(height.getText()).toString().isEmpty() && !Objects.requireNonNull(weight.getText()).toString().isEmpty()) {
                 double w = Double.parseDouble(height.getText().toString());
                 double h = Double.parseDouble(weight.getText().toString());
-                double result = (w / Math.pow(h,2)) * 703;
+                double result = (w /h*h);
                 bmiValue.setText(Double.toString(Math.round(result)));
             } else {
                 Toast.makeText(this,"input incomplete",Toast.LENGTH_SHORT).show();
